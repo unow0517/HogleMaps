@@ -11,16 +11,18 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY0zTSTELi-Rb65wxEerwsTtQibAYAFp4&callback=initMap"
     type="text/javascript"></script>
-
+    
+    <!-- Marker Cluster -->
+    <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
   </head>
 
   <body>
     <div id="map"></div>
     <div id="legend" class='legend'><h3 class='legendtitle'>Legend</h3>
-        <div id="entity"><img src="./image/graduation.png" alt="graduationImage"> <span>Education</span></div>
-        <div id="entity"><img src="./image/internship.png" alt="internshipImage"> <span>Internship</span></div>
-        <div id="entity"><img src="./image/military.png" alt="internshipImage"> <span>Military</span></div>
-        <div id="entity"><img src="./image/baby.png" alt="internshipImage"> <span>Born and Bred</span></div>
+        <div id="entity"><img class ="image" src="./image/education.png" alt="graduationImage"> <span>Education</span></div>
+        <div id="entity"><img class ="image" src="./image/internship.png" alt="internshipImage"> <span>Internship</span></div>
+        <div id="entity"><img class ="image" src="./image/military.png" alt="internshipImage"> <span>Military</span></div>
+        <div id="entity"><img class ="image" src="./image/baby.png" alt="internshipImage"> <span>Born and Bred</span></div>
     </div>
   </body>
 </html>
