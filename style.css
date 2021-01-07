@@ -36,5 +36,9 @@ body {
 .legend > div{
   display:flex;
   align-items: center;
+}
 
+/* Cities */
+.citycontent{
+  text-align: center;
 }

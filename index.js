@@ -3,9 +3,11 @@ let map;
 
 
 function initMap() {
+  const Busan = { lat:35.23694746417701, lng:129.01179299948885 }
   const map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 42.2611809, lng:55.9339575 },
-    zoom: 3,      
+    center: Busan,
+    // { lat: 42.2611809, lng:55.9339575 },
+    zoom: 7,      
   });
 
   var icons = {
@@ -28,7 +30,7 @@ function initMap() {
   }
 
   //Busan
-  const Busan = { lat:35.23694746417701, lng:129.01179299948885 }
+  // const Busan = { lat:35.23694746417701, lng:129.01179299948885 }
   const markerBusan = new google.maps.Marker({
     position: Busan,
     icon: icons.baby,
@@ -36,8 +38,11 @@ function initMap() {
   })
 
   const BusanContent = `
-    <h1>Busan</h1>
-    <p>my hometown</p>
+    <div class='citycontent'>
+      <h1>Busan</h1>
+      <img src="./image/100days.jpg" alt="babyYunHo" width = 200px;>
+      <p>Baby YunHo comes to this world in 1992!</p>
+    </div>
   `
   
   const infoWindowBusan = new google.maps.InfoWindow({
@@ -59,9 +64,12 @@ function initMap() {
   })
 
   const SeoulContent = `
-    <h1>Seoul</h1>
-    <p>my study</p>
-  `
+  <div class='citycontent'>
+    <h1>Seoulwalk</h1>
+    <img src="./image/seoulWalkYunHo.jpg" alt="internshipYunHo" width = 200px;>
+    <p>Baby YunHo comes to this world in 1992!</p>
+  </div>
+`
   
   const infoWindowSeoul = new google.maps.InfoWindow({
     content: SeoulContent
@@ -80,9 +88,12 @@ function initMap() {
     })
 
     const SeoulWalkContent = `
-      <h1>SeoulWalk</h1>
-      <p>my study</p>
-    `
+    <div class='citycontent'>
+      <h1>Seoulwalk</h1>
+      <img src="./image/seoulWalkYunHo.jpg" alt="internshipYunHo" width = 200px;>
+      <p>Internship in City Regeneration Social Corporation "SeoulWalk" from 01.2017~ 04.2017</p>
+    </div>
+  `
     
     const infoWindowSeoulWalk = new google.maps.InfoWindow({
       content: SeoulWalkContent
@@ -126,8 +137,12 @@ function initMap() {
   })
 
   const HwaCheonContent = `
-    <h1>HwaCheon</h1>
-    <p>Military time</p>
+    <div class='citycontent'>
+      <h1>Hwacheon</h1>
+      <img src="./image/soldierYunHo.jpeg" alt="soldierYunHo" width =300px;>
+      <p>Mandatory military service for 21months from March.2012 to December.2013<br>
+      it was really close to the border against north Korea, <br>appreciated that I was born in southern part of this land...</p>
+    </div>
   `
   
   const infoWindowHwaCheon = new google.maps.InfoWindow({
