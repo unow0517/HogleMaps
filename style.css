@@ -13,10 +13,6 @@ body {
   padding: 0;
 }
 
-.image{
-  -webkit-filter: ;
-}
-
 .legend{
   background-color: rgb(255, 255, 255);
   opacity: 80%;
@@ -29,7 +25,7 @@ body {
   margin: 10px;
 }
 
-.legend img{
+.legend .image{
   width:50px;
 }
 
@@ -41,4 +37,8 @@ body {
 /* Cities */
 .citycontent{
   text-align: center;
+}
+
+.citycontent > div {
+  display:flex;
 }
