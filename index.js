@@ -5,8 +5,8 @@ let map;
 function initMap() {
   const Busan = { lat:35.23694746417701, lng:129.01179299948885 }
   const map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 42.2611809, lng:55.9339575 },
-    zoom: 4,      
+    center: { lat: 50.2980766, lng:9.6448864 },
+    zoom: 5.5,      
   });
 
   var icons = {
