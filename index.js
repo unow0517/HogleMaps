@@ -260,7 +260,7 @@ function initMap() {
     <h1>Stuttgart</h1>
     <div>
       <img src="./image/thesis.jpg" alt="thesis" height =250px;>
-      <img src="./image/master1.jpg" alt="library" height =250px;>
+      <img src="./image/master2.jpg" alt="library" height =250px;>
     </div>
     <img src="./image/master1.jpg" alt="excursion" width =584px;>
     <p>09.2017 - 09.2019</p>
