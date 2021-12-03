@@ -432,7 +432,8 @@ function initMap() {
     markerSeoulWalk,
     markerFulda,
     markerStuttgart,
-    markerGeislingen
+    markerGeislingen,
+    markerUlm,
   ]
   new MarkerClusterer(map, markers, 
     {
