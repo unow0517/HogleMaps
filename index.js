@@ -3,7 +3,6 @@ let map;
 
 
 function initMap() {
-  const Busan = { lat:35.23694746417701, lng:129.01179299948885 }
   const map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 50.2980766, lng:9.6448864 },
     zoom: 5.5,      
@@ -12,23 +11,27 @@ function initMap() {
   var icons = {
     baby: {
       url: "./image/baby.png",
-      scaledSize: new google.maps.Size(50,50)
+      scaledSize: new google.maps.Size(30,30)
     },
     education:{
       url: "./image/education.png",
-      scaledSize: new google.maps.Size(50,50)
+      scaledSize: new google.maps.Size(30,30)
     },
     internship:{
       url: "./image/internship.png",
-      scaledSize: new google.maps.Size(50,50)
+      scaledSize: new google.maps.Size(30,30)
     },
     military:{
       url: "./image/military.png",
-      scaledSize: new google.maps.Size(50,50)
+      scaledSize: new google.maps.Size(30,30)
     },
     programming:{
       url: "./image/programming.png",
-      scaledSize: new google.maps.Size(50,50)
+      scaledSize: new google.maps.Size(30,30)
+    },
+    work:{
+      url: 'image/work.png',
+      scaledSize: new google.maps.Size(30,30)
     }
   }
 
@@ -52,11 +55,15 @@ function initMap() {
     programming:{
       url: "./image/programming.png",
       scaledSize: new google.maps.Size(70,70)
+    },
+    work:{
+      url: 'image/work.png',
+      scaledSize: new google.maps.Size(70,70)
     }
   }
 
   //Busan
-  // const Busan = { lat:35.23694746417701, lng:129.01179299948885 }
+  const Busan = { lat:35.23694746417701, lng:129.01179299948885 }
   const markerBusan = new google.maps.Marker({
     position: Busan,
     icon: icons.baby,
@@ -370,6 +377,48 @@ function initMap() {
   });
   //GeislingenEnd
   
+  //Ulm
+  const Ulm = {lat:48.39783710091737, lng:9.986883574948303}
+  const markerUlm = new google.maps.Marker({
+    position: Ulm,
+    map: map,
+    icon: icons.work
+  })
+
+  const UlmContent = `
+  <div class='citycontent'>
+    <h1>Ulm</h1>
+    <div>
+      <img src="./image/ulm1.jpg" alt="GeislingenImage" height = 400px; >
+      <img src="./image/ulm2.jpg" alt="GeislingenImage1" height = 400px;>
+    </div>
+    <p>04.2021 - Present</p>
+    <p><b>The GIS Expert Woo works as a GIS projektmanager</b>
+    </p>
+  </>
+  `
+
+  const infoWindowUlm = new google.maps.InfoWindow({
+    content: UlmContent
+  })
+
+  markerUlm.addListener('click',function(){
+    infoWindowUlm.open(map,markerUlm);
+  })
+
+  google.maps.event.addListener(map, 'click', function(){
+    infoWindowUlm.close();
+  });
+
+  google.maps.event.addListener(markerUlm, 'mouseover', function(){
+    markerUlm.setIcon(largeIcons.work)
+  });
+
+  google.maps.event.addListener(markerUlm, 'mouseout', function(){
+    markerUlm.setIcon(icons.work)
+  });
+  //Ulm End
+
   //Add Legend 
   const legend = map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(document.getElementById('legend'));
 
